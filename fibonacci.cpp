@@ -9,7 +9,7 @@ long long fib(int n)
 {
     if (map.find(n) != map.end())
         return map[n];
-    if (n < 2)
+    if (n <= 2)
         return 1;
     long long result = fib(n - 1) + fib(n - 2);
     map.insert(make_pair(n, result));
@@ -19,6 +19,8 @@ long long fib(int n)
 int main()
 {
     cout << fib(6) << endl;
+    cout << fib(7) << endl;
+    cout << fib(8) << endl;
     cout << fib(50) << endl;
     return 0;
 }
